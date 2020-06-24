@@ -16,5 +16,9 @@
 	<p>
 	<s:property value="messageStore" />
 	</p>
+	
+		<p>
+	<s:property value="userName" />
+	</p>
 </body>
 </html>
