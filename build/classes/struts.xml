@@ -14,6 +14,8 @@
             <result name="success">helloWorld.jsp</result>
         </action>
         
-
+        <action name="register" class="main.action.Register" method="execute">
+            <result name="success">thankyou.jsp</result>			
+		</action>
     </package>
 </struts>

@@ -5,6 +5,10 @@ import main.java.MessageStore;
 
 public class HelloWorldAction extends ActionSupport {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4089330616328359512L;
 	private MessageStore messageStore;
 	private static int helloCount = 0;
 	public String userName = "vongChong";

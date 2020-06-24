@@ -26,5 +26,10 @@
 			<s:textfield name="userName" label="Your name"/>
 			<s:submit value="Submit" />
 		</s:form>
+		
+		<p>
+			<a href="resources/register.jsp">Please register</a>
+			for our prize drawing
+		</p>
 	</body>
 </html>
