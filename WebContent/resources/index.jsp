@@ -14,6 +14,9 @@
 		</p>
 		
 		<s:url action="hello" var="helloLink">
+			<s:param name="userName">
+				Bruce Phillips
+			</s:param>
 		</s:url>
 		
 		<p><a href="${helloLink}">Hello Bruce Philips</a></p>
