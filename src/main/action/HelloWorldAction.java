@@ -7,9 +7,22 @@ public class HelloWorldAction extends ActionSupport {
 
 	private MessageStore messageStore;
 	private static int helloCount = 0;
+	public String userName = "vongChong";
 	
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;						
+	}
+
 	public String execute() {
+		
 		messageStore = new MessageStore();
+
+		messageStore.setMessage(messageStore.getMessage()+ " "+ userName);			
+
 		helloCount++;
 		return "success";
 	}
