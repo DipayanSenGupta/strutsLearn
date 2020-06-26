@@ -1,8 +1,10 @@
 package main.action;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import main.java.Person;
 
-public class Register {
+public class Register extends ActionSupport {
 
 	private Person personBean;
 	
@@ -16,5 +18,19 @@ public class Register {
 	
 	public void setPersonBean(Person person) {
 		personBean = person;
+	}
+	
+	public void validate() {
+		if(personBean.getFirstName().length() == 0) {
+			addFieldError("personBean.firstName", "First name is required");
+		}
+		
+	    if (personBean.getEmail().length() == 0) {
+	        addFieldError("personBean.email", "Email is required.");
+	    }
+
+	    if (personBean.getAge() < 18) {
+	        addFieldError("personBean.age", "Age is required and must be 18 or older");
+	    }
 	}
 }
