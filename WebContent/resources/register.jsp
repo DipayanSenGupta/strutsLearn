@@ -17,5 +17,8 @@
 			<s:textfield key="personBean.age"  />
 			<s:submit/>
 		</s:form>
+		
+		<hr />
+		<s:text name="contact" />
 	</body>
 </html>
