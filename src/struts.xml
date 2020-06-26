@@ -5,8 +5,41 @@
 <struts>
     <constant name="struts.devMode" value="true" />
 	<constant name="struts.custom.i18n.resources" value="global" />
-
     <package name="basicstruts2" extends="struts-default">
+    
+	<!-- setup the default-stack exception mapping interceptor 
+ 		so that any exceptions not caught by this application 
+ 		will be logged and then handled by the global exception 
+ 		mapping -->
+ 		
+	<interceptors>
+		<interceptor-stack name="appDefault">
+	      	 <interceptor-ref name="defaultStack">
+	    			<param name="exception.logEnabled">true</param>
+	    			<param name="exception.logLevel">ERROR</param>
+	 			</interceptor-ref>
+	    </interceptor-stack>
+	</interceptors>
+		
+		<default-interceptor-ref name="appDefault" />
+		
+	<global-results>
+		<result name ='securityerror'>/securityerror.jsp</result>
+		<result name = 'error'>/error.jsp</result>
+	</global-results>
+	<global-exception-mappings>
+		<exception-mapping exception = "main.exceptions.SecurityBreachException" result="securityerror"/>
+		<exception-mapping exception = "java.lang.Exception" result="error"/>
+	</global-exception-mappings>
+	
+
+	
+		<action name="actionspecificexception" class="org.apache.struts.register.action.Register" method="throwSecurityException">
+		   <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException" result="login" />
+		   <result>/register.jsp</result>
+		   <result name="login">/login.jsp</result>
+		</action>
+
         <action name="index">
             <result>index.jsp</result>
         </action>
@@ -23,5 +56,6 @@
 		<action name ="registerInput" class="main.action.Register" method="input" >
             <result name ="input">register.jsp</result>			
     	</action>
+    	
     </package>
 </struts>
