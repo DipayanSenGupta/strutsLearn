@@ -6,6 +6,10 @@ import main.java.Person;
 
 public class Register extends ActionSupport {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4399462923727169100L;
 	private Person personBean;
 	
 	public String execute() throws Exception {

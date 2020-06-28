@@ -32,7 +32,8 @@
 			<s:a href="%{registerInputLink}">Please register</s:a>
 			for our prize drawing
 		</p>
-		
+		<a href='<s:url action="index" namespace="config-broweser" />'>
+		Launch the configuration browser</a>
 		<hr />
 		<s:text name="contact" />
 	</body>

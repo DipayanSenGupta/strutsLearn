@@ -33,15 +33,8 @@
 	</global-exception-mappings>
 	
 
-	
-		<action name="actionspecificexception" class="org.apache.struts.register.action.Register" method="throwSecurityException">
-		   <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException" result="login" />
-		   <result>/register.jsp</result>
-		   <result name="login">/login.jsp</result>
-		</action>
-
         <action name="index">
-            <result>index.jsp</result>
+            <result>/resources/index.jsp</result>
         </action>
 		
         <action name="hello" class="main.action.HelloWorldAction" method="execute">

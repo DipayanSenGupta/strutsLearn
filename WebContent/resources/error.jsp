@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <h4>The application has malfunctioned.</h4>
 
 <p>Please contact technical support with the following information:</p> 
