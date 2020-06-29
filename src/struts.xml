@@ -51,11 +51,11 @@
     	</action>
     	
     	<action name="edit" class="main.action.EditAction" method="input">
-    		<result name ="input">edit.jsp</result>
+    		<result name ="input">/resources/edit.jsp</result>
     	</action>
     	
     	<action name="save" class="main.action.EditAction" method="execute">
-    		<result name ="success">resources/thankyou.jsp</result>
+    		<result name ="success">/resources/thankyou.jsp</result>
     	</action>
     </package>
 </struts>
