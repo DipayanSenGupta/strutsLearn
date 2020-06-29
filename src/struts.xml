@@ -58,9 +58,8 @@
     		<result name ="success">/resources/thankyou.jsp</result>
     	    <result name ="error">/resources/error.jsp</result>
     	    <!--  
-    	    We need input result for focusing on the validation
-    	    and to return it to edit jsp page
-    	    but after input 
+    	    when we go for save an input result name , will get us back to 
+    	    edit jsp to focused results. but after success doesnot get us to thankyou page
     	    -->
     	    <!-- <result name ="input">/resources/edit.jsp</result> -->
     	    		
