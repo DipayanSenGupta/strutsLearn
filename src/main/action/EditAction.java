@@ -4,12 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import main.java.Person;
 import main.java.State;
 import main.service.EditService;
 import main.service.EditServiceInMemory;
 
-public class EditAction {
+public class EditAction extends ActionSupport{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 57433143275641534L;
 	private EditService editService = new EditServiceInMemory();
 	private Person personBean;
 private String [] sports = {"football", "baseball", "basketball" };
