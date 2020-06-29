@@ -12,6 +12,7 @@ public class EditServiceInMemory implements EditService{
 		person.setFirstName("Bruce");
 		person.setLastName("Phillips");
 		person.setEmail("bphillips@ku.edu");
+		person.setPhoneNumber("01680039062");
 		person.setSport("basketball");
 		person.setGender("not sure");
 		person.setResidency("KS");
@@ -32,6 +33,7 @@ public class EditServiceInMemory implements EditService{
 		EditServiceInMemory.person.setOver21( personBean.isOver21() );
 		EditServiceInMemory.person.setCarModels(personBean.getCarModels() );
 		EditServiceInMemory.person.setEmail( personBean.getEmail() );
+		EditServiceInMemory.person.setPhoneNumber( personBean.getPhoneNumber() );
 
 
 	}

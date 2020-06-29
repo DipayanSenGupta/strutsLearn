@@ -12,6 +12,14 @@ public class Person {
 	private String gender;
 	private String residency;
 	private boolean over21;
+	private String phoneNumber;
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	private String [] carModels;
 	public String[] getCarModels() {
 		return carModels;

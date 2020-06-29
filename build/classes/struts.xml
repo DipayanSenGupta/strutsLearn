@@ -51,7 +51,7 @@
     	</action>
     	
     	<action name="edit" class="main.action.EditAction" method="input">
-    		<result name ="input">resources/edit.jsp</result>
+    		<result name ="input">edit.jsp</result>
     	</action>
     	
     	<action name="save" class="main.action.EditAction" method="execute">
