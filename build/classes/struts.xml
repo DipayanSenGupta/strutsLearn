@@ -24,8 +24,8 @@
 		<default-interceptor-ref name="appDefault" />
 		
 	<global-results>
-		<result name ='securityerror'>/securityerror.jsp</result>
-		<result name = 'error'>/error.jsp</result>
+		<result name ='securityerror'>securityerror.jsp</result>
+		<result name = 'error'>error.jsp</result>
 	</global-results>
 	<global-exception-mappings>
 		<exception-mapping exception = "main.exceptions.SecurityBreachException" result="securityerror"/>
@@ -34,7 +34,7 @@
 	
 
         <action name="index">
-            <result>/resources/index.jsp</result>
+            <result>index.jsp</result>
         </action>
 		
         <action name="hello" class="main.action.HelloWorldAction" method="execute">
@@ -42,13 +42,20 @@
         </action>
         
         <action name="register" class="main.action.Register" method="execute">
-            <result name="success">/resources/thankyou.jsp</result>
-            <result name ="input">/resources/register.jsp</result>			
+            <result name="success">thankyou.jsp</result>
+            <result name ="input">register.jsp</result>			
 		</action>
 		
 		<action name ="registerInput" class="main.action.Register" method="input" >
             <result name ="input">register.jsp</result>			
     	</action>
     	
+    	<action name="edit" class="main.action.EditAction" method="input">
+    		<result name ="input">resources/edit.jsp</result>
+    	</action>
+    	
+    	<action name="save" class="main.action.EditAction" method="execute">
+    		<result name ="success">resources/thankyou.jsp</result>
+    	</action>
     </package>
 </struts>
