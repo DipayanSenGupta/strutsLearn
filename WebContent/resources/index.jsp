@@ -31,12 +31,15 @@
 			<s:textfield name="userName" label="Your name"/>
 			<s:submit value="Submit" />
 		</s:form>
-		
+		<p>
+			<a href='<s:url action="edit"/>'>Edit Your Information</a>
+		</p>
 		<s:url action="registerInput" var="registerInputLink"/>
 		<p>
 			<s:a href="%{registerInputLink}">Please register</s:a>
 			for our prize drawing
 		</p>
+		
 		<a href='<s:url action="index" namespace="config-broweser" />'>
 		Launch the configuration browser</a>
 		<hr />
