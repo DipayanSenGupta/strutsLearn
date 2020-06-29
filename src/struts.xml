@@ -56,6 +56,10 @@
     	
     	<action name="save" class="main.action.EditAction" method="execute">
     		<result name ="success">/resources/thankyou.jsp</result>
+    	    		<result name ="error">/resources/error.jsp</result>
+    	    		    		<result name ="input">/resources/edit.jsp</result>
+    	    		
+    	
     	</action>
     </package>
 </struts>
