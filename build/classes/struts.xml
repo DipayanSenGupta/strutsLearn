@@ -66,4 +66,18 @@
     	
     	</action>
     </package>
+    
+    <package name="wildcardmethodexample" extends="struts-default">
+    	<action name="*WildPerson" class="main.action.WildPersonAction" method="{1}">
+    		<result name="success">/resources/wildPerson/view.jsp</result>
+			<result name="input">/resources/wildPerson/input.jsp</result>
+			<allowed-methods>create,edit,saveOrUpdate,delete</allowed-methods>
+    	</action>
+    	
+    	<action name="*WildPerson*" class="main.action.WildPersonAction" method="run{1}This">
+			<result name="success">/resources/wildPerson/view.jsp</result>
+			<result name="input">/resources/wildPerson/input.jsp</result>
+			<allowed-methods>runCreateThis</allowed-methods>
+		</action>
+    </package>
 </struts>
